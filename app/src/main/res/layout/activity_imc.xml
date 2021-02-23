@@ -43,7 +43,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="26dp"
         android:text="Peso:"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -61,7 +61,7 @@
         android:id="@+id/textPeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="26dp"
         app:layout_constraintEnd_toStartOf="@+id/textAltura"
         app:layout_constraintStart_toStartOf="@+id/textAltura"
         app:layout_constraintTop_toBottomOf="@+id/textNome" />
@@ -70,7 +70,8 @@
         android:id="@+id/textAltura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/textIMC"
         app:layout_constraintStart_toStartOf="@+id/textIMC"
         app:layout_constraintTop_toBottomOf="@+id/textPeso" />
 
@@ -78,10 +79,9 @@
         android:id="@+id/textIMC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginRight="123dp"
-        android:text="TextView"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginRight="161dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAltura" />
 
@@ -89,8 +89,11 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
         android:text="IMC:"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

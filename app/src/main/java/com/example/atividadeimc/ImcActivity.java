@@ -37,12 +37,11 @@ public class ImcActivity extends AppCompatActivity {
         tvPeso.setText(peso.toString());
         tvAltura.setText(altura.toString());
         tvImc.setText(df.format(calculadoraIMC(peso, altura)));
-
     }
-
     public Double calculadoraIMC(Double peso, Double altura){
         Double imc = peso / (altura*altura);
         return imc;
     }
+
 }
 
