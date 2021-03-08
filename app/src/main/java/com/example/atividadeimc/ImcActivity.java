@@ -11,7 +11,7 @@ public class ImcActivity extends AppCompatActivity {
 
     String nome;
     Double peso, altura;
-    TextView tvNome, tvPeso, tvAltura, tvImc;
+    TextView tvNome, tvPeso, tvAltura, tvImc, tvStatus;
     DecimalFormat df = new DecimalFormat("##,###,###,##0.00");
 
     @Override
@@ -28,6 +28,7 @@ public class ImcActivity extends AppCompatActivity {
         tvPeso = findViewById(R.id.textPeso);
         tvAltura = findViewById(R.id.textAltura);
         tvImc = findViewById(R.id.textIMC);
+        tvStatus = findViewById(R.id.textStatus);
     }
 
     @Override
@@ -37,10 +38,28 @@ public class ImcActivity extends AppCompatActivity {
         tvPeso.setText(peso.toString());
         tvAltura.setText(altura.toString());
         tvImc.setText(df.format(calculadoraIMC(peso, altura)));
+        tvStatus.setText(getStatus(peso, altura));
     }
     public Double calculadoraIMC(Double peso, Double altura){
         Double imc = peso / (altura*altura);
         return imc;
+    }
+
+    public String getStatus(Double peso, Double altura){
+        Double imc = peso / (altura*altura);
+        if(imc < 18.5){
+            return "Abaixo do peso";
+        }else if(imc < 24.9) {
+            return "Peso ideal";
+        }else if(imc < 29.9) {
+            return "Ligeiramente acima do peso";
+        }else if(imc < 34.9) {
+            return "Obesidade grau I";
+        }else if(imc < 39.9) {
+            return "Obesidade grau II";
+        }else{
+            return "Obesidade grau III";
+        }
     }
 
 }
